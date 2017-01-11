@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
-
+'''
+Pulls data from pronto cycle share.  Combine with cron job to
+get data over time
+'''
 from urllib2 import Request, urlopen
 import json
 from pandas.io.json import json_normalize
 import time
-#from datetime import datetime
 
 url = "https://secure.prontocycleshare.com/data/stations.json"
 request = Request(url)
